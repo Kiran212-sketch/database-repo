@@ -1,0 +1,3 @@
+[submodule "profile-management-db"]
+	path = profile-management-db
+	url = https://github.com/Kiran212-sketch/database-repo.git

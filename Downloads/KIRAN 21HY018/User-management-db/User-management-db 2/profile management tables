@@ -1,0 +1,30 @@
+-- Table: profiles
+CREATE TABLE profiles (
+    profile_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES users(user_id),
+    address VARCHAR(255),
+    phone_number VARCHAR(15),
+    bio TEXT,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table: user_preferences
+CREATE TABLE user_preferences (
+    preference_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES users(user_id),
+    theme VARCHAR(20),
+    notifications_enabled BOOLEAN DEFAULT TRUE,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert sample data into profiles
+INSERT INTO profiles (user_id, address, phone_number, bio)
+VALUES
+(1, '123 Street, City, Country', '1234567890', 'Software Developer'),
+(2, '456 Avenue, Town, Country', '9876543210', 'Project Manager');
+
+-- Insert sample data into user_preferences
+INSERT INTO user_preferences (user_id, theme, notifications_enabled)
+VALUES
+(1, 'Dark', TRUE),
+(2, 'Light', FALSE);
