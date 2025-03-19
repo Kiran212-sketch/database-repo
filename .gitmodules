@@ -4,3 +4,6 @@
 [submodule "profile-management-db/database-repo"]
 	path = profile-management-db/database-repo
 	url = https://github.com/Kiran212-sketch/database-repo.git
+[submodule "newrepo"]
+	path = newrepo
+	url = https://github.com/bhavya0607/newrepo.git
