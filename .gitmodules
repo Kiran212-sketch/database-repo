@@ -7,3 +7,6 @@
 [submodule "newrepo"]
 	path = newrepo
 	url = https://github.com/bhavya0607/newrepo.git
+[submodule "UserManagement1"]
+	path = UserManagement1
+	url = https://github.com/Jeevan-source/UserManagement1.git
